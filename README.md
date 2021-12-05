@@ -38,11 +38,8 @@
 Packaging and local deployment of MNIST pipeline classification 
 
 Goals:
- *Design a simple docker application allowing the classification of handwritten numbers.
- *import an image and obtain a JSON file containing the results.
-
-
-<p align="right">(<a href="#top">back to top</a>)</p>
+ * Design a simple docker application allowing the classification of handwritten numbers.
+ * import an image and obtain a JSON file containing the results.
 
 
 
@@ -53,9 +50,6 @@ Goals:
 * [tensorflow](https://www.tensorflow.org/?hl=fr)
 * [docker](https://www.docker.com/)
 * [json](https://www.json.org/json-fr.html)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 
 
 <!-- GETTING STARTED -->
@@ -131,8 +125,6 @@ _ to install and run the project in your computer you need to follow these simpl
    docker run -d idcore python3 predict.py
    ```
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -143,12 +135,10 @@ If you have a suggestion that would make this better, please fork the repo and c
 Don't forget to give the project a star! Thanks again!
 
 1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
+2. Create your Feature Branch (`git checkout -b your_name_amelioration`)
+3. Commit your Changes (`git commit -m 'Add some amelioration to the project'`)
+4. Push to the Branch (`git push origin your_name_amelioration`)
 5. Open a Pull Request
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
@@ -158,8 +148,6 @@ Don't forget to give the project a star! Thanks again!
 Mortadha Dridi - mortadha4m2@gmail.com
 
 Project Link: [https://github.com/morrrtadha/predict_app](https://github.com/morrrtadha/predict_app)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
@@ -173,6 +161,6 @@ Use this space to list resources you find helpful and would like to give credit 
 * [Tensorflow classification](https://www.tensorflow.org/tutorials/keras/classification)
 * [Choose an Open Source License](https://choosealicense.com)
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+
 
 
