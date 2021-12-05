@@ -28,4 +28,3 @@ COPY predict.py ./predict.py
 # We use the keyword 'CMD' to do that.
 # The following command will execute "python ./main.py".
 RUN python3 train.py
-RUN python3 predict.py

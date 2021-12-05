@@ -1,24 +1,8 @@
-<!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
 
-  <h3 align="center">Best-README-Template</h3>
+  <h3 align="center">hand written numbers classification model</h3>
 
-  <p align="center">
-    An awesome README template to jumpstart your projects!
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
-  </p>
 </div>
 
 
@@ -37,10 +21,9 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#Install and run the project">Install and run the project</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
@@ -78,48 +61,77 @@ Goals:
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+To run this project you need to install some prerequisites
 
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
-* npm
+* docker
+* 1- Update the apt package index and install packages to allow apt to use a repository over HTTPS:
   ```sh
-  npm install npm@latest -g
+  sudo apt-get update
   ```
+  ```sh
+  sudo apt-get install \
+    ca-certificates \
+    curl \
+    gnupg \
+    lsb-release
+  ```
+* 2- Add Docker’s official GPG key:
+  ```sh 
+  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+  ```
+* 3- Use the following command to set up the stable repository. To add the nightly or test repository, add the word nightly or test (or both) after the word stable in the commands below. Learn about nightly and test channels.
+  ```sh 
+  echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+  ```
+* Install Docker Engine
+* 1- Update the apt package index, and install the latest version of Docker Engine and containerd, or go to the next step to install a specific version:
+  ```sh
+  sudo apt-get update
+  ```
+  ```sh
+  sudo apt-get install docker-ce docker-ce-cli containerd.io
+  ```
+* To install a specific version of Docker Engine, list the available versions in the repo, then select and install:
+  a. List the versions available in your repo:
+  ```sh
+  apt-cache madison docker-ce
+  ```
+  b. Install a specific version using the version string from the second column, for example, 5:18.09.1~3-0~ubuntu-xenial.
+  ```sh
+  sudo apt-get install docker-ce=<VERSION_STRING> docker-ce-cli=<VERSION_STRING> containerd.io
+  ```
+  c. Verify that Docker Engine is installed correctly by running the hello-world image.
+  ```sh
+   sudo docker run hello-world
+  ```
+### Install and run the project
 
-### Installation
+_ to install and run the project in your computer you need to follow these simple steps._
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/morrrtadha/predict_app.git
    ```
-3. Install NPM packages
+2. Enter to the project repo
    ```sh
-   npm install
+   cd predict_app
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+3. Build the docker image
+   ```sh
+   docker build -t prediction-app -f Dockerfile .
+   ```
+3. Run the docker image
+   ```sh
+   docker run -d idcore python3 predict.py
    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 
 
 <!-- CONTRIBUTING -->
@@ -162,4 +174,5 @@ Use this space to list resources you find helpful and would like to give credit 
 * [Choose an Open Source License](https://choosealicense.com)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
 
