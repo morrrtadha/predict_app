@@ -1,7 +1,7 @@
 <br />
 <div align="center">
 
-  <h3 align="center">hand written numbers classification model</h3>
+  <h3 align="center">Hand written numbers classification model</h3>
 
 </div>
 
